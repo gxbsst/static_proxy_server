@@ -17,11 +17,32 @@ var numberset = []struct {
 }
 
 var _ = Describe("Test", func() {
+
+  // var book Book
+
+  // BeforeEach(func() {
+  //   book = NewBookFromJSON(`{
+  //     "title":"Les Miserables",
+  //     "author":"Victor Hugo",
+  //     "pages":1488
+  //   }`)
+  // })
+
   Describe("#Add", func(){
     It("should eq expect", func(){
       for _, set := range numberset {
-        Expect(Add(set.x, set.y)).To(Equal(set.result))
+         Expect(Add(set.x, set.y)).To(Equal(set.result))
+         // Expect(Add(set.x, set.y)).ShouldNot(Equal(set.result))
       }
     })
   })
 })
+
+
+
+
+
+
+
+
+
