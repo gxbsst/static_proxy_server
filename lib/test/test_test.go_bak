@@ -1,0 +1,31 @@
+package test
+
+import (
+	"testing"
+)
+
+var numberset = []struct {
+	x      int
+	y      int
+	result int
+}{
+	{1, 2, 3},
+	{1, 2, 3},
+	{2, 4, 6},
+}
+
+// func TestPuts(t *testing.T) {
+// 	result := Puts()
+// 	if result != "OK" {
+// 		t.Fail("...")
+// 	}
+// }
+
+func TestAdd(t *testing.T) {
+	for _, set := range numberset {
+		aresult := Add(set.x, set.y)
+		if aresult != set.result {
+			t.Errorf("Func %d", set.result)
+		}
+	}
+}
